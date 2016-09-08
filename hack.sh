@@ -99,7 +99,7 @@ do
         networkcheck
     elif [[ "$m" == "9" ]]; then
         header
-        status
+        showstatus
     fi
     echo
     echo
@@ -130,7 +130,7 @@ networkcheck(){
   dot 43
   echo -e " [+] Instruction: ${mag}$1${end}"
 }
-status(){
+showstatus(){
     echo -n "Collecting INFO"
   dot 43
   echo -e " [+] Instruction: ${mag}$1${end}"
@@ -159,15 +159,16 @@ elif [ $1 == "runbackdoor" ]; then
 elif [ $1 == "-n" ]; then
     header
     networkcheck
-elif [ $1 == "networkcheck" ];
+elif [ $1 == "networkcheck" ]; then
     header
     networkcheck
 elif [ $1 == "-s" ]; then
     header
-    status
+    showstatus
 elif [ $1 == "status" ]; then
     header
-    status
+    showstatus
 else
     #Clearly the user doesnt have a command... so... give them the menu.
     showmenu.
+fi
