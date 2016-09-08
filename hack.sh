@@ -156,8 +156,6 @@ elif [ $1 == "-rb" ]; then
 elif [ $1 == "runbackdoor" ]; then
     header
     runbackdoor
-
-
 elif [ $1 == "-n" ]; then
     header
     networkcheck
